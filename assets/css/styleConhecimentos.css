@@ -1,0 +1,178 @@
+body {
+    background-color: rgb(216, 215, 215);
+}
+
+.funcao {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: start;
+    padding-top: 1em;
+    margin-left: 1%;
+}
+
+.menu {
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 70%;
+    margin-top: -1%;
+    width: 400px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+.titulo {
+    color: black;
+    font-weight: bold;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    margin-left: -8%;
+}
+.formacoes{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3em;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+ .formacoes h2{
+    font-size: 1.5;
+    font-weight: bold;
+ }
+ .imagems-linguagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    margin-top: 100px;  
+    margin-bottom: 20px; 
+}
+.imagems-linguagens a img:hover {
+    transform: scale(1.1); 
+}
+.copy{
+    display: flex;
+    justify-content: center;
+    color: rgb(216, 215, 215);
+}
+.copy p{
+  margin-top: 0.5%;
+}
+footer {
+    background-color: black;
+    height: 30px;
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    body {
+        background-color: rgb(216, 215, 215);
+        margin: 0;
+        padding: 0;
+      
+    }
+    header {
+        text-align: center;
+        padding: 10px 0;
+    }
+    .funcao {
+        font-size: 1em;
+        font-weight: bold;
+        display: flex;
+        justify-content: center; 
+        padding-top: 1em;
+    }
+    .menu {
+        font-size: 1.2em;
+        display: inline-flex;
+        justify-content: center; 
+        gap: 20px; 
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+
+    .titulo {
+        font-size: 1.5em;
+        margin-left: 0;
+    }
+
+    .formacoes {
+        font-size: 1.1em;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagems-linguagens {
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 50px;
+    }
+
+    .imagems-linguagens img {
+        width: 100px;
+        height: auto;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .menu {
+        font-size: 1.2em;
+        display: inline-flex;
+        justify-content: center; 
+        gap: 20px; 
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+
+    .funcao {
+        font-size: 1.2em;
+    }
+
+    .titulo {
+        font-size: 1.2em;
+    }
+
+    .formacoes {
+        font-size: 1em;
+        margin-left: 0;
+    }
+
+    .imagems-linguagens img {
+        width: 80px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    .imagems-linguagens {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-around;
+        align-items: center;
+        gap: 5px;
+        margin-top: 30px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
