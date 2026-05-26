@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Leonardo Andriotti — Desenvolvedor Web full-stack. PHP, Laravel, JavaScript, React. Projetos, experiência e contato.">
+    <meta name="author" content="Leonardo Andriotti">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Leonardo Andriotti | Desenvolvedor Web">
+    <meta property="og:description" content="Desenvolvedor full-stack em Porto Alegre. PHP, Laravel, MySQL, JavaScript e React.">
+    <meta property="og:image" content="assets/images/memoji-pc.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="assets/images/memoji-pc.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/images/memoji-pc.png">
+    <link rel="stylesheet" href="assets/styles/index.css">
+    <link rel="stylesheet" href="assets/styles/projects.css">
+    <link rel="stylesheet" href="assets/styles/sobre.css">
+    <link rel="stylesheet" href="assets/styles/skills.css">
+    <link rel="stylesheet" href="assets/styles/outros.css">
+    <title>Leonardo Andriotti | Desenvolvedor Web</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-nav">
+            <a href="#home" class="nav-logo btn-icone" data-i18n-aria="aria.home" aria-label="Voltar ao início">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/>
+                </svg>
+            </a>
+
+            <button
+                type="button"
+                id="btn-menu-mobile"
+                class="btn-menu-mobile btn-icone"
+                data-i18n-aria="aria.menuOpen"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="nav-links"
+            >
+                <span class="btn-menu-icone" aria-hidden="true"></span>
+            </button>
+
+            <nav class="nav-links nav-links--desktop" id="nav-links-desktop" data-i18n-aria="aria.navMain" aria-label="Menu principal">
+                <a href="#home" data-nav="home" data-i18n="nav.home">Home</a>
+                <a href="#sobre" data-nav="sobre" data-i18n="nav.about">Sobre</a>
+                <a href="#projetos" data-nav="projetos" data-i18n="nav.projects">Projetos</a>
+                <a href="#skills" data-nav="skills" data-i18n="nav.skills">Skills</a>
+                <a href="#outros" data-nav="outros" data-i18n="nav.more">Outros</a>
+            </nav>
+
+            <div class="nav-acoes">
+                <button type="button" id="btn-idioma" class="btn-icone btn-idioma" aria-label="Mudar para inglês">EN</button>
+                <button type="button" id="btn-dark-mode" class="btn-icone" data-i18n-aria="aria.themeLight" aria-label="Ativar tema claro">☀</button>
+                <button type="button" class="btn-nav-contato" id="btn-abrir-contato" data-i18n="nav.contact">Contato</button>
+            </div>
+        </div>
+
+        <nav class="nav-mobile" id="nav-links" data-i18n-aria="aria.navMobile" aria-label="Menu mobile" aria-hidden="true">
+            <div class="nav-mobile-painel">
+                <a href="#home" data-nav="home" data-i18n="nav.home">Home</a>
+                <a href="#sobre" data-nav="sobre" data-i18n="nav.about">Sobre</a>
+                <a href="#projetos" data-nav="projetos" data-i18n="nav.projects">Projetos</a>
+                <a href="#skills" data-nav="skills" data-i18n="nav.skills">Skills</a>
+                <a href="#outros" data-nav="outros" data-i18n="nav.more">Outros</a>
+                <button type="button" class="btn btn-primario nav-mobile-contato" id="btn-contato-mobile" data-i18n="nav.contact">Contato</button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="conteudo-principal">
+        <section id="home">
+            <div class="container hero">
+                <div class="hero-texto">
+                    <p class="hero-eyebrow" data-i18n="hero.eyebrow">Portfolio pessoal / Developer Lab</p>
+                    <h1>Leonardo Andriotti</h1>
+                    <p class="hero-tagline" data-i18n="hero.tagline">
+                        Construindo ideias com código, design e tecnologia web.
+                    </p>
+                    <p class="hero-descricao" data-i18n="hero.desc">
+                        Desenvolvedor em evolução, explorando front-end, back-end e
+                        integrações para transformar curiosidade em projetos reais.
+                    </p>
+                    <p class="hero-stack">
+                        PHP · Laravel · MySQL · JavaScript · React · HTML · CSS
+                    </p>
+                    <div class="hero-acoes">
+                        <div class="hero-cta">
+                            <a href="#projetos" class="btn btn-primario" data-i18n="hero.ctaProjects">Ver projetos</a>
+                            <a href="assets/docs/Curriculo_Leonardo_Andriotti.pdf" class="btn btn-outline" download="Curriculo_Leonardo_Andriotti.pdf">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                                <span data-i18n="hero.ctaResume">Currículo PDF</span>
+                            </a>
+                        </div>
+                        <div class="hero-links">
+                            <a href="https://github.com/LeoAndriotti" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <span aria-hidden="true">·</span>
+                            <a href="https://www.linkedin.com/in/LeoAndriotti" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" id="hero-visual" data-i18n-aria="aria.techSphere" aria-label="Tecnologias que utilizo">
+                    <div class="tech-sphere">
+                        <div class="sphere-wireframe" aria-hidden="true"></div>
+                        <div class="sphere-orbit sphere-orbit--outer">
+                            <div class="tech-node" style="--i: 0" data-name="React" data-accent="#149eca"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt=""></div>
+                            <div class="tech-node" style="--i: 1" data-name="Laravel" data-accent="#ff2d20"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt=""></div>
+                            <div class="tech-node" style="--i: 2" data-name="PHP" data-accent="#777bb4"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt=""></div>
+                            <div class="tech-node" style="--i: 3" data-name="JavaScript" data-accent="#f0db4f" data-texto-escuro="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt=""></div>
+                            <div class="tech-node" style="--i: 4" data-name="Vite" data-accent="#646cff"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt=""></div>
+                            <div class="tech-node" style="--i: 5" data-name="GitHub" data-accent="#24292f"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt=""></div>
+                        </div>
+                        <div class="sphere-orbit sphere-orbit--inner">
+                            <div class="tech-node" style="--i: 0" data-name="HTML" data-accent="#e34f26"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=""></div>
+                            <div class="tech-node" style="--i: 1" data-name="CSS" data-accent="#1572b6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""></div>
+                            <div class="tech-node" style="--i: 2" data-name="Git" data-accent="#f05032"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""></div>
+                            <div class="tech-node" style="--i: 3" data-name="Linux" data-accent="#fcc624" data-texto-escuro="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="tech-focus-ui" id="tech-focus-ui" aria-hidden="true">
+                        <img class="tech-focus-icon" id="tech-focus-icon" src="" alt="">
+                        <span class="tech-focus-pill" id="tech-focus-pill"></span>
+                    </div>
+                    <img src="assets/images/memoji-pc.png" data-i18n-alt="aria.avatar" alt="Avatar de Leonardo" class="memoji-principal" width="340" height="340">
+                </div>
+            </div>
+            <a href="#sobre" class="scroll-hint" data-i18n="hero.scroll">Role para explorar ↓</a>
+        </section>
+
+        <section id="sobre" class="section-sobre">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow" data-i18n="about.eyebrow">Sobre mim</p>
+                    <h2 data-i18n="about.title">Quem sou fora e dentro do código</h2>
+                    <p data-i18n="about.sub">Um pouco da minha rotina, de onde eu sou e do que me move no dia a dia.</p>
+                </header>
+
+                <div class="sobre-bento">
+                    <article class="bento-card bento-galeria">
+                        <div class="galeria-slider" id="galeria-slider" aria-live="polite">
+                            <figure class="galeria-slide is-active">
+                                <img src="assets/images/sobre/01-chimarrao.png" data-i18n-alt="gallery.alt1" alt="Chimarrão ao ar livre" loading="lazy">
+                            </figure>
+                            <figure class="galeria-slide">
+                                <img src="assets/images/sobre/02-viagem.png" data-i18n-alt="gallery.alt2" alt="Igreja em viagem" loading="lazy">
+                            </figure>
+                            <figure class="galeria-slide">
+                                <img src="assets/images/sobre/05-porto-alegre.png" data-i18n-alt="gallery.alt3" alt="Barco no Guaíba" loading="lazy">
+                            </figure>
+                            <figure class="galeria-slide">
+                                <img src="assets/images/sobre/03-dirigir.png" data-i18n-alt="gallery.alt4" alt="Dirigindo" loading="lazy">
+                            </figure>
+                            <figure class="galeria-slide">
+                                <img src="assets/images/sobre/04-futebol.png" data-i18n-alt="gallery.alt5" alt="Estádio de futebol" loading="lazy">
+                            </figure>
+                            <figure class="galeria-slide">
+                                <img src="assets/images/sobre/06-evento.png" data-i18n-alt="gallery.alt6" alt="Palestra em evento de tecnologia" loading="lazy">
+                            </figure>
+                            <figure class="galeria-slide">
+                                <img src="assets/images/sobre/07-desenvolver.png" data-i18n-alt="gallery.alt7" alt="Código no editor e navegador" loading="lazy">
+                            </figure>
+                        </div>
+                        <div class="galeria-dots" id="galeria-dots" role="tablist" data-i18n-aria="aria.galleryNav" aria-label="Navegação da galeria"></div>
+                    </article>
+
+                    <div class="bento-col-local">
+                        <div class="bento-card bento-cidade-foto">
+                            <img
+                                src="assets/images/sobre/porto-alegre-orla.png"
+                                data-i18n-alt="location.alt"
+                                alt="Vista aérea de Porto Alegre — Orla do Guaíba e Usina do Gasômetro"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="bento-card bento-local-info">
+                            <p class="local-pais" data-i18n="location.country">Brasil</p>
+                            <p class="local-cidade" data-i18n-html="location.city">Porto Alegre,<br>Rio Grande do Sul</p>
+                            <p class="local-coords">30.0346° S · 51.2177° W</p>
+                            <p class="local-fuso" data-i18n="location.tz">GMT−3 (Horário de Brasília)</p>
+                        </div>
+                    </div>
+
+                    <article class="bento-card bento-dev">
+                        <h3 data-i18n="dev.title">Desenvolvimento</h3>
+                        <p data-i18n-html="dev.text">
+                            Construo <strong>sites, sistemas e APIs</strong> com foco em código
+                            organizado e experiência clara para quem usa.
+                        </p>
+                        <ul class="dev-tags">
+                            <li data-i18n="dev.tag1">Front-end</li>
+                            <li data-i18n="dev.tag2">Back-end</li>
+                        </ul>
+                        <p class="hero-stack hero-stack--compact">PHP · Laravel · MySQL · JavaScript · React</p>
+                        <p class="status-aberto" data-i18n="dev.status">Aberto a colaborações e oportunidades</p>
+                    </article>
+                </div>
+
+                <div class="sobre-trajetoria">
+                    <h3 class="trajetoria-titulo" data-i18n="career.title">Trajetória profissional</h3>
+                    <p class="trajetoria-intro" data-i18n-html="career.intro">
+                        Formado em <strong>Técnico em Informática</strong> (ULBRA São Lucas) e cursando
+                        <strong>Análise e Desenvolvimento de Sistemas</strong> na La Salle. Minha entrada na área
+                        de tecnologia começou na <strong>Orion Cloud</strong>, empresa terceirizada: primeiro como
+                        estagiário de suporte e, em cerca de dois meses, migrei para estágio em desenvolvimento.
+                        Fui efetivado como desenvolvedor júnior e, em seguida, contratado diretamente pelo cliente —
+                        o escritório de advocacia <strong>Dias do Canto</strong>, onde atuo até hoje em sistemas web
+                        e ERP jurídico.
+                    </p>
+                    <ol class="timeline">
+                        <li class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-periodo" data-i18n="tl1.period">Jul 2025 — Atual</span>
+                                <span class="timeline-empresa" data-i18n="tl1.company">Dias do Canto · Advocacia</span>
+                            </div>
+                            <h4 class="timeline-cargo" data-i18n="tl1.role">Desenvolvedor Júnior</h4>
+                            <p data-i18n="tl1.desc">Contratação direta pelo cliente. PHP, JavaScript, MySQL, ERP jurídico, APIs e reuniões de requisitos.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-periodo" data-i18n="tl2.period">Fev 2025 — Jun 2025</span>
+                                <span class="timeline-empresa" data-i18n="tl2.company">Orion Cloud</span>
+                            </div>
+                            <h4 class="timeline-cargo" data-i18n="tl2.role">Desenvolvedor Júnior</h4>
+                            <p data-i18n="tl2.desc">Desenvolvimento full-stack, novas funcionalidades, integração com APIs e suporte a clientes.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-periodo" data-i18n="tl3.period">Ago 2024 — Jan 2025</span>
+                                <span class="timeline-empresa" data-i18n="tl3.company">Orion Cloud</span>
+                            </div>
+                            <h4 class="timeline-cargo" data-i18n="tl3.role">Estágio — Suporte → Desenvolvimento</h4>
+                            <p data-i18n="tl3.desc">Suporte técnico e, em seguida, desenvolvimento web com PHP, HTML, CSS, JavaScript e MySQL.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-periodo" data-i18n="tl4.period">Jan 2026 — Em andamento</span>
+                                <span class="timeline-empresa" data-i18n="tl4.company">Universidade La Salle</span>
+                            </div>
+                            <h4 class="timeline-cargo" data-i18n="tl4.role">Análise e Desenvolvimento de Sistemas</h4>
+                            <p data-i18n="tl4.desc">Graduação tecnológica em andamento.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-periodo" data-i18n="tl5.period">Jan 2024 — Jul 2025</span>
+                                <span class="timeline-empresa" data-i18n="tl5.company">ULBRA São Lucas</span>
+                            </div>
+                            <h4 class="timeline-cargo" data-i18n="tl5.role">Técnico em Informática</h4>
+                            <p data-i18n="tl5.desc">Formação concluída — lógica de programação, sistemas e suporte.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="section-projetos">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow" data-i18n="projects.eyebrow">Portfolio</p>
+                    <h2 data-i18n="projects.title">Projetos em destaque</h2>
+                    <p data-i18n="projects.sub">Dois projetos que representam meu trabalho — toque ou passe o mouse para ver as telas.</p>
+                </header>
+
+                <div class="projetos-destaque">
+                    <article class="projeto-card projeto-card--destaque">
+                        <div class="projeto-media">
+                            <div class="projeto-screenshots">
+                                <img src="assets/images/projects/csl-times-1.png" data-i18n-alt="projects.csl.alt" alt="Tela do CSL Times" class="projeto-screenshot is-active" width="800" height="500">
+                            </div>
+                        </div>
+                        <div class="projeto-body">
+                            <div class="projeto-meta">
+                                <span class="projeto-num">01</span>
+                                <span class="projeto-meta-sep">—</span>
+                                <span class="projeto-tipo" data-i18n="projects.type">Web App</span>
+                                <a href="https://github.com/LeoAndriotti/CSLTimes" class="projeto-github-link" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                                    GitHub
+                                </a>
+                            </div>
+                            <h3>CSL Times</h3>
+                            <p class="projeto-desc" data-i18n="projects.csl.desc">
+                                Portal de notícias com vitrine, busca por filtros e painel editorial em tempo real.
+                            </p>
+                            <ul class="projeto-tags">
+                                <li>PHP</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>MySQL</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="projeto-card projeto-card--destaque">
+                        <div class="projeto-media">
+                            <div class="projeto-screenshots">
+                                <img src="assets/images/projects/ecomarket-1.png" data-i18n-alt="projects.eco.alt1" alt="Vitrine EcoMarket" class="projeto-screenshot is-active" width="800" height="500">
+                                <img src="assets/images/projects/ecomarket-2.png" data-i18n-alt="projects.eco.alt2" alt="Sobre EcoMarket" class="projeto-screenshot" width="800" height="500">
+                                <img src="assets/images/projects/ecomarket-3.png" data-i18n-alt="projects.eco.alt3" alt="Painel EcoMarket" class="projeto-screenshot" width="800" height="500">
+                            </div>
+                            <div class="projeto-screen-dots" role="tablist" data-i18n-aria="aria.projectScreens" aria-label="Telas do projeto"></div>
+                            <div class="projeto-media-badge" data-i18n="projects.eco.badge">Toque ou passe o mouse nas telas</div>
+                        </div>
+                        <div class="projeto-body">
+                            <div class="projeto-meta">
+                                <span class="projeto-num">02</span>
+                                <span class="projeto-meta-sep">—</span>
+                                <span class="projeto-tipo" data-i18n="projects.type">Web App</span>
+                                <a href="https://github.com/LeoAndriotti/EcoMarket" class="projeto-github-link" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                                    GitHub
+                                </a>
+                            </div>
+                            <h3>EcoMarket</h3>
+                            <p class="projeto-desc" data-i18n="projects.eco.desc">
+                                Marketplace B2B de commodities agrícolas — vitrine, painel do produtor e gestão de ofertas.
+                            </p>
+                            <ul class="projeto-tags">
+                                <li>PHP</li>
+                                <li>Laravel</li>
+                                <li>JavaScript</li>
+                                <li>MySQL</li>
+                                <li>API</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="projetos-github-cta">
+                    <a href="https://github.com/LeoAndriotti?tab=repositories" class="btn btn-primario" target="_blank" rel="noopener noreferrer" data-i18n="projects.cta">
+                        Ver mais projetos no GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section-skills">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow" data-i18n="skills.eyebrow">Skills</p>
+                    <h2 data-i18n="skills.title">Habilidades técnicas</h2>
+                    <p data-i18n="skills.sub">Stack e ferramentas que uso no dia a dia, com base no meu currículo e projetos.</p>
+                </header>
+
+                <div class="skills-grid">
+                    <article class="skills-card">
+                        <h3 data-i18n="skills.fe">Front-end</h3>
+                        <ul class="skills-lista skills-lista--com-icone">
+                            <li><span class="skill-icone" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=""></span><span>HTML</span></li>
+                            <li><span class="skill-icone" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""></span><span>CSS</span></li>
+                            <li><span class="skill-icone" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt=""></span><span>JavaScript</span></li>
+                            <li><span class="skill-icone" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt=""></span><span>React</span></li>
+                            <li><span class="skill-icone" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt=""></span><span>Bootstrap</span></li>
+                            <li><span class="skill-icone" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt=""></span><span>jQuery</span></li>
+                        </ul>
+                    </article>
+                    <article class="skills-card">
+                        <h3 data-i18n="skills.be">Back-end</h3>
+                        <ul class="skills-lista skills-lista--com-icone">
+                            <li><span class="skill-icone" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt=""></span><span>PHP</span></li>
+                            <li><span class="skill-icone" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt=""></span><span>Laravel</span></li>
+                            <li><span class="skill-icone skill-icone--svg" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 7h6v2H6v2h3v2H4V7zm10 0h6v6h-2v-2h-2v4h-2V7zm-8 8h2v2H6v-2zm10 0h2v2h-2v-2z"/></svg></span><span>APIs REST</span></li>
+                        </ul>
+                    </article>
+                    <article class="skills-card">
+                        <h3 data-i18n="skills.db">Banco &amp; dados</h3>
+                        <ul class="skills-lista skills-lista--com-icone">
+                            <li><span class="skill-icone" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt=""></span><span>MySQL</span></li>
+                            <li><span class="skill-icone" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/phpmyadmin/phpmyadmin-original.svg" alt=""></span><span>phpMyAdmin</span></li>
+                        </ul>
+                    </article>
+                    <article class="skills-card">
+                        <h3 data-i18n="skills.tools">Ferramentas</h3>
+                        <ul class="skills-lista skills-lista--com-icone">
+                            <li><span class="skill-icone" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""></span><span>Git</span></li>
+                            <li><span class="skill-icone" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt=""></span><span>Linux</span></li>
+                            <li><span class="skill-icone skill-icone--svg" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18v2H3V5zm2 4h14v2H5V9zm3 4h8v2H8v-2zm-5 4h18v2H3v-2z"/></svg></span><span>Scrum</span></li>
+                            <li><span class="skill-icone" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt=""></span><span>Vite</span></li>
+                        </ul>
+                    </article>
+                    <article class="skills-card skills-card--idiomas">
+                        <h3 data-i18n="skills.lang">Idiomas</h3>
+                        <ul class="skills-lista skills-lista--idiomas">
+                            <li>
+                                <span><span class="skill-icone skill-icone--flag" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/HatScripts/circle-flags@gh-pages/flags/br.svg" alt=""></span><span data-i18n="skills.pt">Português</span></span>
+                                <span class="skills-nivel" data-i18n="skills.native">Nativo</span>
+                            </li>
+                            <li>
+                                <span><span class="skill-icone skill-icone--flag" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/HatScripts/circle-flags@gh-pages/flags/us.svg" alt=""></span><span data-i18n="skills.en">Inglês</span></span>
+                                <span class="skills-nivel" data-i18n="skills.basic">Básico</span>
+                            </li>
+                            <li>
+                                <span><span class="skill-icone skill-icone--flag" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/HatScripts/circle-flags@gh-pages/flags/es.svg" alt=""></span><span data-i18n="skills.es">Espanhol</span></span>
+                                <span class="skills-nivel" data-i18n="skills.basic">Básico</span>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="skills-card skills-card--soft">
+                        <h3 data-i18n="skills.other">Outras</h3>
+                        <ul class="skills-lista skills-lista--com-icone">
+                            <li><span class="skill-icone skill-icone--svg" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 2 7v2c0 5.25 3.75 10.15 10 11.35C18.25 19.15 22 14.25 22 9V7l-10-5zm0 2.18 8 4v1.82c0 4.17-2.92 8.21-8 9.35-5.08-1.14-8-5.18-8-9.35V8.18l8-4zM8 11h2v6H8v-6zm6 0h2v6h-2v-6z"/></svg></span><span data-i18n="skills.api">Integração com APIs</span></li>
+                            <li><span class="skill-icone skill-icone--svg" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 2 9v2h20V9L12 3zm8 10H4v6h16v-6zM8 15h2v2H8v-2zm6 0h2v2h-2v-2z"/></svg></span><span data-i18n="skills.erp">ERP / sistemas web</span></li>
+                            <li><span class="skill-icone skill-icone--svg" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10v2H7V2zm-2 4h14l-1 14H6L5 6zm3 3v9h2V9H8zm6 0v9h2V9h-2z"/></svg></span><span data-i18n="skills.req">Levantamento de requisitos</span></li>
+                            <li><span class="skill-icone" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoft/microsoft-original.svg" alt=""></span><span data-i18n="skills.office">Pacote Office</span></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="outros" class="section-outros">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow" data-i18n="more.eyebrow">Outros</p>
+                    <h2 data-i18n="more.title">Currículo, cursos e mais</h2>
+                    <p data-i18n="more.sub">Material complementar para download e consulta.</p>
+                </header>
+
+                <div class="outros-grid">
+                    <article class="outros-card outros-card--curriculo">
+                        <h3 data-i18n="more.resumeTitle">Currículo em PDF</h3>
+                        <p data-i18n="more.resumeDesc">Experiência profissional, formação e habilidades em um arquivo para download.</p>
+                        <a href="assets/docs/Curriculo_Leonardo_Andriotti.pdf" class="curriculo-preview" target="_blank" rel="noopener noreferrer">
+                            <img
+                                src="assets/images/curriculo-preview.png"
+                                data-i18n-alt="more.resumeAlt"
+                                alt="Prévia do currículo de Leonardo Andriotti"
+                                width="357"
+                                height="505"
+                                loading="lazy"
+                            >
+                        </a>
+                        <a href="assets/docs/Curriculo_Leonardo_Andriotti.pdf" class="btn btn-primario" download="Curriculo_Leonardo_Andriotti.pdf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            <span data-i18n="more.download">Download PDF</span>
+                        </a>
+                    </article>
+
+                    <article class="outros-card outros-card--cursos">
+                        <h3 data-i18n="more.coursesTitle">Cursos complementares</h3>
+                        <p data-i18n="more.coursesSub">Seleção de formações da Udemy e outras plataformas:</p>
+                        <ul class="outros-cursos-lista">
+                            <li data-i18n="more.c1">Desenvolvimento Web com JavaScript — 89h</li>
+                            <li data-i18n="more.c2">JavaScript Avançado e Projetos Práticos — 10h</li>
+                            <li data-i18n="more.c3">Engenharia de Prompts com IA — 5h</li>
+                            <li data-i18n="more.c4">Fundamentos de Scrum — 1h</li>
+                            <li data-i18n="more.c5">Git para Iniciantes — 1h</li>
+                            <li data-i18n="more.c6">Introdução a Linux — 2h</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-contato" id="modal-contato" aria-hidden="true">
+        <div class="modal-contato-overlay" data-fechar-modal></div>
+        <div class="modal-contato-painel" role="dialog" aria-modal="true" aria-labelledby="modal-contato-titulo">
+            <button type="button" class="modal-fechar" data-fechar-modal data-i18n-aria="aria.modalClose" aria-label="Fechar">×</button>
+            <h2 id="modal-contato-titulo" data-i18n="contact.title">Contato</h2>
+            <p class="modal-contato-sub" data-i18n="contact.sub">Escolha uma rede ou envie uma mensagem por e-mail.</p>
+
+            <nav class="social-links modal-social" data-i18n-aria="aria.social" aria-label="Redes sociais">
+                <a href="https://www.linkedin.com/in/LeoAndriotti" class="social-link social-link--linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/LeoAndriotti" class="social-link social-link--facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/LeoAndriotti" class="social-link social-link--instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="https://github.com/LeoAndriotti" class="social-link social-link--github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+            </nav>
+
+            <form class="form-contato" id="form-contato" method="POST">
+                <input type="hidden" name="_subject" id="form-subject" value="Novo contato — Portfolio Leonardo Andriotti">
+                <input type="hidden" name="_captcha" value="true">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" id="form-contato-next" value="">
+
+                <div class="form-grupo">
+                    <label for="contato-nome" data-i18n="contact.name">Nome</label>
+                    <input type="text" id="contato-nome" name="nome" required data-i18n-placeholder="contact.namePh" placeholder="Seu nome" autocomplete="name">
+                </div>
+                <div class="form-grupo">
+                    <label for="contato-email" data-i18n="contact.email">E-mail</label>
+                    <input type="email" id="contato-email" name="email" required data-i18n-placeholder="contact.emailPh" placeholder="seu@email.com" autocomplete="email">
+                </div>
+                <div class="form-grupo">
+                    <label for="contato-mensagem" data-i18n="contact.message">Mensagem</label>
+                    <textarea id="contato-mensagem" name="mensagem" rows="4" required data-i18n-placeholder="contact.messagePh" placeholder="Como posso ajudar?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primario btn-enviar" data-i18n="contact.send">Enviar mensagem</button>
+            </form>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="container footer-content">
+            <nav class="social-links" data-i18n-aria="aria.social" aria-label="Redes sociais">
+                <a href="https://www.linkedin.com/in/LeoAndriotti" class="social-link social-link--linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/LeoAndriotti" class="social-link social-link--facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/LeoAndriotti" class="social-link social-link--instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="https://github.com/LeoAndriotti" class="social-link social-link--github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+            </nav>
+            <p class="footer-copy">&copy; 2026 Leonardo Andriotti</p>
+        </div>
+    </footer>
+
+    <script src="assets/scripts/i18n.js"></script>
+    <script src="assets/scripts/index.js"></script>
+    <script src="assets/scripts/nav.js"></script>
+    <script src="assets/scripts/contact.js"></script>
+    <script src="assets/scripts/tech-sphere.js"></script>
+    <script src="assets/scripts/featured-projects.js"></script>
+    <script src="assets/scripts/sobre.js"></script>
+    <script src="assets/scripts/scroll-reveal.js"></script>
+</body>
+</html>

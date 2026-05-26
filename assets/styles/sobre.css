@@ -1,0 +1,375 @@
+.section-sobre {
+    padding: var(--secao-espaco) 0;
+    border-top: 1px solid var(--azul-borda);
+}
+
+.sobre-bento {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (min-width: 960px) {
+    .sobre-bento {
+        grid-template-columns: 1.15fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: stretch;
+    }
+
+    .bento-galeria {
+        grid-column: 1;
+        grid-row: 1 / 3;
+    }
+
+    .bento-col-local {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+
+    .bento-dev {
+        grid-column: 3;
+        grid-row: 1 / 3;
+    }
+}
+
+.bento-card {
+    background: var(--fundo-elevado);
+    border: 1px solid var(--azul-borda);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.bento-card h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.bento-card h3::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    margin-top: 0.5rem;
+    background: var(--azul-claro);
+    border-radius: 2px;
+}
+
+.bento-lead {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+}
+
+/* Galeria manual */
+.bento-galeria {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.galeria-slider {
+    position: relative;
+    flex: 1;
+    min-height: 280px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: #0a0e14;
+}
+
+.galeria-slide {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.galeria-slide.is-active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.galeria-slide > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.galeria-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.85rem 0 0.35rem;
+}
+
+.galeria-dot {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.galeria-dot:hover {
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.galeria-dot.is-active {
+    background: var(--azul-claro);
+    transform: scale(1.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .galeria-slide {
+        transition: none;
+    }
+}
+
+/* Local */
+.bento-col-local {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bento-cidade-foto {
+    position: relative;
+    min-height: 200px;
+    flex: 1;
+}
+
+.bento-cidade-foto img {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+}
+
+.bento-local-info {
+    padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
+    position: relative;
+    background:
+        linear-gradient(rgba(5, 6, 8, 0.88), rgba(5, 6, 8, 0.92)),
+        radial-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px);
+    background-size: auto, 18px 18px;
+}
+
+.bento-local-info::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    bottom: 1rem;
+    width: 3px;
+    background: var(--azul-claro);
+    border-radius: 0 2px 2px 0;
+}
+
+.local-cidade {
+    font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.25;
+}
+
+.local-coords {
+    font-size: 0.85rem;
+    color: var(--azul-claro);
+    font-weight: 500;
+}
+
+.local-fuso {
+    font-size: 0.8rem;
+    color: var(--texto-suave);
+    margin-top: 0.25rem;
+}
+
+.local-pais {
+    font-size: 0.75rem;
+    color: var(--texto-suave);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* Dev / craft */
+.bento-dev {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.bento-dev p {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+}
+
+.bento-dev strong {
+    color: var(--texto);
+    font-weight: 600;
+}
+
+.dev-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin-bottom: auto;
+    padding-bottom: 1.25rem;
+}
+
+.dev-tags li {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--azul-borda);
+    border-radius: 6px;
+    color: var(--texto-suave);
+}
+
+.status-aberto {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--texto-suave);
+    margin-top: 1rem;
+}
+
+.status-aberto::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+}
+
+/* Trajetória */
+.sobre-trajetoria {
+    margin-top: 1.75rem;
+    padding: 1.5rem;
+    background: var(--fundo-elevado);
+    border: 1px solid var(--azul-borda);
+    border-radius: 1rem;
+}
+
+.trajetoria-titulo {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.trajetoria-intro {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    max-width: 72ch;
+}
+
+.trajetoria-intro strong {
+    color: var(--texto);
+    font-weight: 600;
+}
+
+.timeline {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 0.35rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--azul-claro), transparent);
+    opacity: 0.4;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 0 1.75rem 1.25rem;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -1.15rem;
+    top: 0.35rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--azul-claro);
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+}
+
+.timeline-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.75rem;
+    margin-bottom: 0.35rem;
+}
+
+.timeline-periodo {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--azul-claro);
+}
+
+.timeline-empresa {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--texto-suave);
+}
+
+.timeline-cargo {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.timeline-item p {
+    font-size: 0.88rem;
+    color: var(--texto-suave);
+    line-height: 1.55;
+    max-width: 60ch;
+}
+
+body.tema-claro .sobre-trajetoria {
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+}
+
+body.tema-claro .bento-local-info {
+    background:
+        linear-gradient(rgba(248, 250, 252, 0.92), rgba(248, 250, 252, 0.95)),
+        radial-gradient(rgba(37, 99, 235, 0.12) 1px, transparent 1px);
+    background-size: auto, 18px 18px;
+}

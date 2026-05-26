@@ -1,0 +1,257 @@
+.section-projetos {
+    padding: var(--secao-espaco) 0;
+    border-top: 1px solid var(--azul-borda);
+}
+
+.section-header {
+    margin-bottom: 2rem;
+    max-width: 42rem;
+}
+
+.section-eyebrow {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--azul-claro);
+    margin-bottom: 0.75rem;
+}
+
+.section-header h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+}
+
+.section-header p {
+    color: var(--texto-suave);
+}
+
+/* Cards */
+.projetos-destaque {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 900px) {
+    .projetos-destaque {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.75rem;
+    }
+}
+
+.projeto-card--destaque {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--azul-borda);
+    border-radius: 1rem;
+    background: var(--fundo-elevado);
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.projeto-card--destaque:hover {
+    border-color: rgba(59, 130, 246, 0.45);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(59, 130, 246, 0.12);
+    transform: translateY(-4px);
+}
+
+/* Área da screenshot — protagonista */
+.projeto-media {
+    position: relative;
+    background: #0a0e14;
+    border-bottom: 1px solid var(--azul-borda);
+}
+
+.projeto-screenshots {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.projeto-screenshot {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    opacity: 0;
+    transform: scale(1.02);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.projeto-screenshot.is-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.projeto-card--destaque:hover .projeto-screenshot.is-active {
+    transform: scale(1.04);
+}
+
+.projeto-media-badge {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--texto-suave);
+    background: rgba(5, 6, 8, 0.85);
+    border: 1px solid var(--azul-borda);
+    border-radius: 6px;
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.projeto-card--destaque:hover .projeto-media-badge {
+    opacity: 1;
+}
+
+.projeto-screen-dots {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.4rem;
+    z-index: 3;
+}
+
+.projeto-screen-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.projeto-screen-dot:hover {
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.projeto-screen-dot.is-active {
+    background: var(--azul-claro);
+    transform: scale(1.25);
+}
+
+/* Conteúdo abaixo da imagem */
+.projeto-body {
+    padding: 1.25rem 1.35rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.projeto-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.projeto-num {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--azul-claro);
+    letter-spacing: 0.06em;
+}
+
+.projeto-meta-sep {
+    color: var(--texto-suave);
+    opacity: 0.5;
+    font-size: 0.75rem;
+}
+
+.projeto-tipo {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--texto-suave);
+}
+
+.projeto-github-link {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--texto-suave);
+    text-decoration: none;
+    border: 1px solid var(--azul-borda);
+    border-radius: 999px;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.projeto-github-link:hover {
+    color: var(--texto);
+    border-color: var(--azul-claro);
+    background: rgba(37, 99, 235, 0.1);
+}
+
+.projeto-github-link svg {
+    width: 0.9rem;
+    height: 0.9rem;
+    fill: currentColor;
+}
+
+.projeto-body h3 {
+    font-size: 1.35rem;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.projeto-desc {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--texto-suave);
+}
+
+.projeto-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    list-style: none;
+    margin-top: 0.35rem;
+}
+
+.projeto-tags li {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--texto-suave);
+    border: 1px solid var(--azul-borda);
+    border-radius: 5px;
+    background: rgba(37, 99, 235, 0.05);
+}
+
+.projetos-github-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.75rem;
+}
+
+/* Tema claro */
+body.tema-claro .projeto-card--destaque {
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+}
+
+body.tema-claro .projeto-card--destaque:hover {
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+}
+
+body.tema-claro .projeto-media {
+    background: #f1f5f9;
+}

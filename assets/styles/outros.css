@@ -1,0 +1,110 @@
+.section-outros {
+    padding: var(--secao-espaco) 0 var(--secao-espaco-sm);
+    border-top: 1px solid var(--azul-borda);
+}
+
+.outros-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .outros-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.outros-card {
+    padding: 1.5rem;
+    background: var(--fundo-elevado);
+    border: 1px solid var(--azul-borda);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.outros-card h3 {
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+}
+
+.outros-card p {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+    line-height: 1.55;
+}
+
+.outros-card--curriculo {
+    gap: 0.65rem;
+}
+
+.outros-card--curriculo p {
+    flex: 0;
+}
+
+.outros-card--curriculo .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.outros-cursos-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.outros-cursos-lista li {
+    font-size: 0.82rem;
+    color: var(--texto-suave);
+    padding-left: 0.85rem;
+    position: relative;
+}
+
+.outros-cursos-lista li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--azul-claro);
+}
+
+.curriculo-preview {
+    display: block;
+    width: 5.25rem;
+    aspect-ratio: 210 / 297;
+    border-radius: 0.35rem;
+    overflow: hidden;
+    border: 1px solid var(--azul-borda);
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.curriculo-preview:hover {
+    transform: translateY(-1px) scale(1.03);
+    border-color: var(--azul-claro);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.22);
+}
+
+.curriculo-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.outros-card--cursos p {
+    flex: 0;
+}
+
+body.tema-claro .outros-card {
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+}
