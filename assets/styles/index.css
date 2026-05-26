@@ -64,11 +64,12 @@ a {
     align-items: center;
     justify-content: space-between;
     gap: 0.75rem;
-    padding: 0.75rem 1.25rem;
+    padding: 0.6rem 1.15rem;
     background: var(--nav-fundo);
     border: 1px solid var(--azul-borda);
     border-radius: 999px;
     backdrop-filter: blur(12px);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
 }
 
 .nav-logo {
@@ -89,7 +90,9 @@ a {
 .nav-mobile a {
     text-decoration: none;
     color: var(--texto-suave);
-    transition: color 0.2s;
+    transition: color 0.2s, opacity 0.2s;
+    opacity: 0.92;
+    font-weight: 500;
 }
 
 .nav-links--desktop a {
@@ -101,6 +104,7 @@ a {
 .nav-mobile a:hover,
 .nav-mobile a.is-active {
     color: var(--azul-claro);
+    opacity: 1;
 }
 
 .nav-links--desktop a.is-active,
@@ -178,12 +182,14 @@ body.nav-aberto .btn-menu-icone::after {
     color: var(--texto-suave);
     font-size: 1rem;
     cursor: pointer;
-    transition: color 0.2s, border-color 0.2s;
+    transition: color 0.2s, border-color 0.2s, background 0.2s, transform 0.2s;
 }
 
 .btn-icone:hover {
     color: var(--azul-claro);
     border-color: var(--azul-claro);
+    background: rgba(37, 99, 235, 0.12);
+    transform: translateY(-1px);
 }
 
 .btn-idioma {
@@ -416,16 +422,20 @@ body.nav-aberto .btn-menu-icone::after {
 .btn-outline:hover {
     border-color: var(--azul-claro);
     color: var(--azul-claro);
-    background: rgba(37, 99, 235, 0.08);
+    background: rgba(37, 99, 235, 0.12);
+    transform: translateY(-2px);
 }
 
 .btn-primario {
     background: var(--destaque);
     color: #fff;
+    box-shadow: 0 14px 40px rgba(37, 99, 235, 0.22);
 }
 
 .btn-primario:hover {
     background: var(--destaque-hover);
+    box-shadow: 0 18px 50px rgba(37, 99, 235, 0.32);
+    transform: translateY(-2px);
 }
 
 .btn-secundario {
@@ -676,6 +686,14 @@ body.nav-aberto .btn-menu-icone::after {
 @media (min-width: 1200px) {
     .hero-visual {
         --sphere-size: 580px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-primario:hover,
+    .btn-outline:hover,
+    .btn-icone:hover {
+        transform: none;
     }
 }
 
