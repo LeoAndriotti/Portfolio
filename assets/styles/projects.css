@@ -87,12 +87,7 @@
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.projeto-screenshot.projeto-mock {
-    object-fit: unset;
-}
-
 .projeto-media-badge--dynamic {
-    opacity: 1;
     left: 0.75rem;
     right: auto;
 }
@@ -102,12 +97,8 @@
     transform: scale(1);
 }
 
-.projeto-card--destaque:hover .projeto-screenshot.is-active:not(.projeto-mock) {
+.projeto-card--destaque:hover .projeto-screenshot.is-active {
     transform: scale(1.04);
-}
-
-.projeto-card--destaque:hover .projeto-screenshot.projeto-mock.is-active {
-    transform: scale(1);
 }
 
 .projeto-media-badge {

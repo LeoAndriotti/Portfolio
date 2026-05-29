@@ -101,6 +101,10 @@ const I18N = {
         "projects.legal.desc":
             "Painel operacional para escritório de advocacia — prazos, produtividade, chamados de TI e chat em tempo real entre a equipe.",
         "projects.legal.private": "Projeto interno",
+        "projects.legal.alt1": "Painel Portal Jurídico",
+        "projects.legal.alt2": "Chat Portal Jurídico",
+        "projects.legal.alt3": "Chamados Portal Jurídico",
+        "projects.legal.badge": "Toque ou passe o mouse nas telas",
         "projects.legal.screen1": "Painel",
         "projects.legal.screen2": "Chat",
         "projects.legal.screen3": "Chamados",
@@ -253,6 +257,10 @@ const I18N = {
         "projects.legal.desc":
             "Operational dashboard for a law firm — deadlines, productivity, IT tickets and real-time team chat.",
         "projects.legal.private": "Internal project",
+        "projects.legal.alt1": "Legal Portal dashboard",
+        "projects.legal.alt2": "Legal Portal chat",
+        "projects.legal.alt3": "Legal Portal tickets",
+        "projects.legal.badge": "Tap or hover on the screens",
         "projects.legal.screen1": "Dashboard",
         "projects.legal.screen2": "Chat",
         "projects.legal.screen3": "Tickets",

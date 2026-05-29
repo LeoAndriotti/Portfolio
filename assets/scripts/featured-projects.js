@@ -3,6 +3,7 @@ document.querySelectorAll(".projeto-card--destaque").forEach((card) => {
     const dotsContainer = card.querySelector(".projeto-screen-dots");
     const badge = card.querySelector(".projeto-media-badge");
     const dynamicBadge = card.dataset.dynamicBadge === "true";
+    const badgeHintKey = card.dataset.i18nBadge;
 
     if (screenshots.length <= 1) {
         if (dotsContainer) dotsContainer.remove();
@@ -24,8 +25,12 @@ document.querySelectorAll(".projeto-card--destaque").forEach((card) => {
         return `${base} ${i + 1}`;
     }
 
-    function atualizarBadge(i) {
+    function atualizarBadge(i, modo = "tela") {
         if (!badge || !dynamicBadge) return;
+        if (modo === "hint" && badgeHintKey && window.PortfolioI18n) {
+            badge.textContent = window.PortfolioI18n.t(badgeHintKey);
+            return;
+        }
         const key = screenshots[i]?.dataset?.i18nScreen;
         if (key && window.PortfolioI18n) {
             badge.textContent = window.PortfolioI18n.t(key);
@@ -47,7 +52,8 @@ document.querySelectorAll(".projeto-card--destaque").forEach((card) => {
 
     document.addEventListener("i18n:change", () => {
         dots.forEach((dot, i) => dot.setAttribute("aria-label", labelTela(i)));
-        atualizarBadge(index);
+        if (intervalId) atualizarBadge(index);
+        else atualizarBadge(index, "hint");
     });
 
     function showSlide(i) {
@@ -71,10 +77,14 @@ document.querySelectorAll(".projeto-card--destaque").forEach((card) => {
         intervalId = null;
     }
 
-    card.addEventListener("mouseenter", iniciarCiclo);
+    card.addEventListener("mouseenter", () => {
+        atualizarBadge(index);
+        iniciarCiclo();
+    });
     card.addEventListener("mouseleave", () => {
         pararCiclo();
         showSlide(0);
+        if (dynamicBadge) atualizarBadge(0, "hint");
     });
 
     let touchStartX = 0;
@@ -99,5 +109,5 @@ document.querySelectorAll(".projeto-card--destaque").forEach((card) => {
         { passive: true }
     );
 
-    if (dynamicBadge) atualizarBadge(0);
+    if (dynamicBadge) atualizarBadge(0, "hint");
 });

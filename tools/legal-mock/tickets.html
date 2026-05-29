@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1440">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="legal-shared.css">
+    <style>
+        .legal-tickets-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            flex: 1;
+            min-height: 0;
+        }
+        .legal-ticket {
+            border: 1px solid var(--legal-border);
+            border-radius: 10px;
+            padding: 14px 16px;
+            border-left: 4px solid var(--legal-maroon);
+            background: #fafafa;
+        }
+        .legal-ticket strong { display: block; font-size: 14px; margin-bottom: 4px; }
+        .legal-ticket span { font-size: 12px; color: var(--legal-muted); }
+        .legal-prio {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: 700;
+        }
+        .legal-prio--alta { background: #fee2e2; color: #b91c1c; }
+        .legal-prio--media { background: #ffedd5; color: #c2410c; }
+        .legal-prio--ok { background: #dcfce7; color: #15803d; }
+    </style>
+    <title>Chamados mock</title>
+</head>
+<body class="legal-capture">
+    <div class="legal-app">
+        <aside class="legal-sidebar" aria-hidden="true">
+            <div class="legal-sidebar__logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z" stroke="#fff" stroke-width="1.5"/></svg>
+                <span>PORTAL<br><em>JURÍDICO</em></span>
+            </div>
+            <nav class="legal-sidebar__nav">
+                <a href="#"><svg viewBox="0 0 24 24"><path d="M4 10.5L12 4l8 6.5V20a1 1 0 01-1 1h-5v-6H10v6H5a1 1 0 01-1-1v-9.5z" fill="currentColor"/></svg></a>
+                <a class="is-active" href="#"><svg viewBox="0 0 24 24"><path d="M4 6h16v10H8l-4 4V6z" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></a>
+                <a href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></a>
+                <span class="legal-sidebar__spacer"></span>
+            </nav>
+        </aside>
+        <div class="legal-workspace">
+            <header class="legal-header">
+                <div class="legal-header__user">
+                    <span class="legal-avatar"></span>
+                    <div><strong>Matriz · RS</strong><a href="#">Trocar unidade</a></div>
+                </div>
+                <div class="legal-header__search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#9ca3af" stroke-width="2"/><path d="M20 20l-3-3" stroke="#9ca3af" stroke-width="2"/></svg>
+                    <span>Buscar chamados e solicitações…</span>
+                </div>
+                <button type="button" class="legal-header__notify" aria-label="Notificações"></button>
+            </header>
+            <div class="legal-page">
+                <div class="legal-main" style="display:flex;flex-direction:column">
+                    <h1 class="legal-greeting">Chamados de TI</h1>
+                    <div class="legal-tickets-grid">
+                        <section class="legal-card">
+                            <header class="legal-card__head">
+                                <h2>Meus chamados</h2>
+                                <div class="legal-stat-pills">
+                                    <span class="legal-stat-pill legal-stat-pill--orange">Abertos: 2</span>
+                                    <span class="legal-stat-pill">Em andamento: 1</span>
+                                </div>
+                                <button type="button" class="legal-btn-outline">Novo chamado</button>
+                            </header>
+                            <div class="legal-ticket" style="margin-bottom:10px">
+                                <strong>#2041 — Acesso ao módulo de prazos</strong>
+                                <span>Aberto há 2 dias · Equipe TI</span>
+                                <span class="legal-prio legal-prio--alta">ALTA</span>
+                            </div>
+                            <div class="legal-ticket">
+                                <strong>#2038 — Ajuste no relatório</strong>
+                                <span>Em andamento · Sistema</span>
+                                <span class="legal-prio legal-prio--media">MÉDIA</span>
+                            </div>
+                        </section>
+                        <section class="legal-card">
+                            <header class="legal-card__head"><h2>Histórico recente</h2></header>
+                            <div class="legal-ticket" style="border-left-color:#15803d;margin-bottom:10px">
+                                <strong>#2029 — Exportação de planilha</strong>
+                                <span>Concluído · Resolvido pela equipe</span>
+                                <span class="legal-prio legal-prio--ok">CONCLUÍDO</span>
+                            </div>
+                            <div class="legal-ticket" style="border-left-color:#15803d">
+                                <strong>#2015 — Correção de layout</strong>
+                                <span>Concluído · Deploy em produção</span>
+                                <span class="legal-prio legal-prio--ok">CONCLUÍDO</span>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

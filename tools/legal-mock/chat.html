@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1440">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="legal-shared.css">
+    <title>Chat mock</title>
+</head>
+<body class="legal-capture legal-capture--chat">
+    <div class="legal-chat-overlay">
+        <div class="legal-chat">
+            <header class="legal-chat__bar">
+                <span>Chat</span>
+                <span aria-hidden="true">✕</span>
+            </header>
+            <div class="legal-chat__body">
+                <aside class="legal-chat__list">
+                    <div class="legal-chat__search">Buscar por nome ou e-mail…</div>
+                    <div class="legal-chat__tabs">
+                        <button type="button" class="is-active">EQUIPE</button>
+                        <button type="button">GRUPOS</button>
+                    </div>
+                    <div class="legal-chat__person is-active">
+                        <span class="legal-avatar"></span>
+                        <div><strong>Colaborador A</strong><small>Online</small></div>
+                        <span class="legal-chat__dot"></span>
+                    </div>
+                    <div class="legal-chat__person">
+                        <span class="legal-avatar" style="background:linear-gradient(145deg,#7ba3d4,#3d5a8a)"></span>
+                        <div><strong>Colaborador B</strong><small>Online</small></div>
+                        <span class="legal-chat__dot"></span>
+                    </div>
+                    <div class="legal-chat__person">
+                        <span class="legal-avatar" style="background:linear-gradient(145deg,#c97b9a,#8b3d5c)"></span>
+                        <div><strong>Colaborador C</strong><small>Offline</small></div>
+                        <span class="legal-chat__dot legal-chat__dot--off"></span>
+                    </div>
+                    <div class="legal-chat__person">
+                        <span class="legal-avatar" style="background:linear-gradient(145deg,#86c9a8,#3d7a5c)"></span>
+                        <div><strong>Colaborador D</strong><small>Offline</small></div>
+                        <span class="legal-chat__dot legal-chat__dot--off"></span>
+                    </div>
+                </aside>
+                <div class="legal-chat__panel">
+                    <div class="legal-chat__peer">
+                        <span class="legal-avatar"></span>
+                        <div><strong>Colaborador A</strong><span>usuario@exemplo.com</span></div>
+                    </div>
+                    <div class="legal-chat__msgs">
+                        <div class="legal-chat__bubble">Podemos alinhar o prazo do processo #1042?<time>09:42</time></div>
+                        <div class="legal-chat__bubble legal-chat__bubble--out">Claro, envio a atualização em instantes.<time>09:44</time></div>
+                    </div>
+                    <div class="legal-chat__composer">
+                        <span aria-hidden="true">😊</span>
+                        <div class="field">Mensagem, legenda da foto ou arquivo…</div>
+                        <button type="button" class="legal-chat__send" aria-label="Enviar">➤</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

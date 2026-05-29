@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1440">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="legal-shared.css">
+    <title>Dashboard mock</title>
+</head>
+<body class="legal-capture legal-capture--dashboard">
+    <div class="legal-app">
+        <aside class="legal-sidebar" aria-hidden="true">
+            <div class="legal-sidebar__logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z" stroke="#fff" stroke-width="1.5"/></svg>
+                <span>PORTAL<br><em>JURÍDICO</em></span>
+            </div>
+            <nav class="legal-sidebar__nav">
+                <a class="is-active" href="#"><svg viewBox="0 0 24 24"><path d="M4 10.5L12 4l8 6.5V20a1 1 0 01-1 1h-5v-6H10v6H5a1 1 0 01-1-1v-9.5z" fill="currentColor"/></svg></a>
+                <a href="#"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v10l-7 4-7-4V7l7-4z" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></a>
+                <a href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.5"/></svg></a>
+                <a href="#"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 4.5-3.5 8.5-8 9.5C7.5 21.5 4 17.5 4 13V7l8-4z" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></a>
+                <a href="#"><svg viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="1.5" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M9 8V6a3 3 0 016 0v2" stroke="currentColor" stroke-width="1.5"/></svg></a>
+                <a href="#"><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="3" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M4 19c1.5-3 4-4.5 8-4.5s6.5 1.5 8 4.5" stroke="currentColor" stroke-width="1.5"/></svg></a>
+                <a href="#"><svg viewBox="0 0 24 24"><path d="M5 18V8l7-4 7 4v10M9 18v-6h6v6" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></a>
+                <span class="legal-sidebar__spacer"></span>
+                <a href="#"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h14" stroke="currentColor" stroke-width="1.5"/></svg></a>
+            </nav>
+            <a class="legal-sidebar__foot" href="#"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        </aside>
+
+        <div class="legal-workspace">
+            <header class="legal-header">
+                <div class="legal-header__user">
+                    <span class="legal-avatar"></span>
+                    <div>
+                        <strong>Matriz · RS</strong>
+                        <a href="#">Trocar unidade</a>
+                    </div>
+                </div>
+                <div class="legal-header__search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#9ca3af" stroke-width="2"/><path d="M20 20l-3-3" stroke="#9ca3af" stroke-width="2"/></svg>
+                    <span>Buscar processos, prazos ou documentos…</span>
+                </div>
+                <button type="button" class="legal-header__notify" aria-label="Notificações"></button>
+            </header>
+
+            <div class="legal-page">
+                <div class="legal-main">
+                    <h1 class="legal-greeting">Bom dia, <span>Ana Silva</span></h1>
+
+                    <section class="legal-card legal-card--prazos">
+                        <header class="legal-card__head">
+                            <h2><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M12 8v4l2.5 1.5" stroke="currentColor" stroke-width="1.5"/></svg> Prazos</h2>
+                            <div class="legal-stat-pills">
+                                <span class="legal-stat-pill legal-stat-pill--green">Total: 8</span>
+                                <span class="legal-stat-pill legal-stat-pill--orange">Esta semana: 2</span>
+                                <span class="legal-stat-pill legal-stat-pill--pink">No mês: 3</span>
+                            </div>
+                            <button type="button" class="legal-btn-outline">Prazos futuros</button>
+                        </header>
+                        <div class="legal-table-wrap">
+                            <table class="legal-table legal-table--prazos">
+                                <thead>
+                                    <tr>
+                                        <th>PROCESSO</th><th>TIPO</th><th>PRAZO INICIAL</th><th>PRAZO FINAL</th><th>PRAZO P.F.</th><th>STATUS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Proc. #1042</td><td>Audiência</td><td>••/••/••••</td><td>••/••/••••</td><td>••/••/••••</td><td class="legal-td-status">Pendente</td></tr>
+                                    <tr><td>Proc. #0998</td><td>Petição</td><td>••/••/••••</td><td>••/••/••••</td><td>—</td><td class="legal-td-status">Pendente</td></tr>
+                                    <tr><td>Proc. #0871</td><td>Cumprimento</td><td>••/••/••••</td><td>••/••/••••</td><td>••/••/••••</td><td class="legal-td-status">Pendente</td></tr>
+                                    <tr><td>Proc. #0764</td><td>Ligação</td><td>••/••/••••</td><td>••/••/••••</td><td>—</td><td class="legal-td-status">Pendente</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <div class="legal-row-2">
+                        <section class="legal-card legal-card--birth">
+                            <header class="legal-card__head">
+                                <h2><svg width="18" height="18" viewBox="0 0 24 24"><path d="M4 18h16M6 14h2v4M16 14h2v4M8 10a4 4 0 018 0" stroke="currentColor" fill="none" stroke-width="1.5"/></svg> Aniversários</h2>
+                                <div class="legal-toggle">
+                                    <span class="is-active">Mês</span><span>Semana</span>
+                                </div>
+                                <div class="legal-month-nav"><button type="button">‹</button><span>Maio ••••</span><button type="button">›</button></div>
+                            </header>
+                            <table class="legal-table legal-table--birth">
+                                <thead><tr><th>NOME</th><th>DATA</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Colaborador A</td><td>••/••</td></tr>
+                                    <tr><td>Colaborador B</td><td>••/••</td></tr>
+                                    <tr><td>Colaborador C</td><td>••/••</td></tr>
+                                    <tr><td>Colaborador D</td><td>••/••</td></tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <section class="legal-card legal-card--tickets">
+                            <header class="legal-card__head">
+                                <h2><svg width="18" height="18" viewBox="0 0 24 24"><path d="M4 6h16v10H8l-4 4V6z" stroke="currentColor" fill="none" stroke-width="1.5"/></svg> Chamados</h2>
+                                <div class="legal-stat-pills legal-stat-pills--muted">
+                                    <span class="legal-stat-pill">Abertos: 0</span>
+                                    <span class="legal-stat-pill">Em andamento: 0</span>
+                                    <span class="legal-stat-pill">Aguardando TI: 0</span>
+                                </div>
+                                <button type="button" class="legal-btn-outline">Ver chamados</button>
+                            </header>
+                            <p class="legal-empty">Nenhum chamado atribuído a você</p>
+                        </section>
+                    </div>
+
+                    <section class="legal-card legal-card--prod">
+                        <header class="legal-card__head">
+                            <h2><svg width="18" height="18" viewBox="0 0 24 24"><path d="M5 18V10M12 18V6M19 18v-8" stroke="currentColor" stroke-width="2"/></svg> Produtividade</h2>
+                        </header>
+                        <div class="legal-prod">
+                            <div class="legal-prod__chart" aria-hidden="true"></div>
+                            <ul class="legal-prod__legend">
+                                <li><i style="background:#94a3b8"></i> AJUSTES (18%)</li>
+                                <li><i style="background:#64748b"></i> BUGS (12%)</li>
+                                <li><i style="background:#22a06b"></i> SUGESTÃO DE MELHORIA (70%)</li>
+                                <li><i style="background:#cbd5e1"></i> OUTRO (0%)</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="legal-btn-outline legal-btn-outline--sm">Ver histórico</button>
+                    </section>
+                </div>
+
+                <aside class="legal-iniciais">
+                    <header>
+                        <h2>Iniciais</h2>
+                        <p>Pendentes: 2 — Urgentes: 1 — Total: 3</p>
+                    </header>
+                    <div class="legal-iniciais__filters">
+                        <button type="button" class="is-active">Todos</button>
+                        <button type="button">Pendentes</button>
+                        <button type="button">Urgentes</button>
+                    </div>
+                    <button type="button" class="legal-btn-outline legal-btn-outline--block">Ver fluxo</button>
+                    <article class="legal-flow-card">
+                        <div><strong>Fluxo #12</strong><small>Atualizado há 2 h</small></div>
+                        <span class="legal-badge legal-badge--pending">PENDENTE</span>
+                    </article>
+                    <article class="legal-flow-card">
+                        <div><strong>Fluxo #09</strong><small>Concluído</small></div>
+                        <span class="legal-badge legal-badge--done">CONCLUÍDO</span>
+                    </article>
+                </aside>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
