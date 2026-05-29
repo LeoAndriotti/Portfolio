@@ -35,8 +35,14 @@
 
 @media (min-width: 900px) {
     .projetos-destaque {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.75rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .projetos-destaque {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -81,13 +87,27 @@
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+.projeto-screenshot.projeto-mock {
+    object-fit: unset;
+}
+
+.projeto-media-badge--dynamic {
+    opacity: 1;
+    left: 0.75rem;
+    right: auto;
+}
+
 .projeto-screenshot.is-active {
     opacity: 1;
     transform: scale(1);
 }
 
-.projeto-card--destaque:hover .projeto-screenshot.is-active {
+.projeto-card--destaque:hover .projeto-screenshot.is-active:not(.projeto-mock) {
     transform: scale(1.04);
+}
+
+.projeto-card--destaque:hover .projeto-screenshot.projeto-mock.is-active {
+    transform: scale(1);
 }
 
 .projeto-media-badge {
@@ -175,6 +195,17 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--texto-suave);
+}
+
+.projeto-privado {
+    margin-left: auto;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--texto-suave);
+    border: 1px solid var(--azul-borda);
+    border-radius: 999px;
+    letter-spacing: 0.04em;
 }
 
 .projeto-github-link {

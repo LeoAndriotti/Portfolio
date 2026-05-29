@@ -85,8 +85,9 @@ const I18N = {
         "projects.eyebrow": "Portfolio",
         "projects.title": "Projetos em destaque",
         "projects.sub":
-            "Dois projetos que representam meu trabalho — toque ou passe o mouse para ver as telas.",
+            "Três projetos que representam meu trabalho — toque ou passe o mouse para ver as telas.",
         "projects.type": "Web App",
+        "projects.typeErp": "ERP / Sistema interno",
         "projects.csl.alt": "Tela do CSL Times",
         "projects.csl.desc":
             "Portal de notícias com vitrine, busca por filtros e painel editorial em tempo real.",
@@ -96,6 +97,13 @@ const I18N = {
         "projects.eco.badge": "Toque ou passe o mouse nas telas",
         "projects.eco.desc":
             "Marketplace B2B de commodities agrícolas — vitrine, painel do produtor e gestão de ofertas.",
+        "projects.legal.title": "Portal Jurídico",
+        "projects.legal.desc":
+            "Painel operacional para escritório de advocacia — prazos, produtividade, chamados de TI e chat em tempo real entre a equipe.",
+        "projects.legal.private": "Projeto interno",
+        "projects.legal.screen1": "Painel",
+        "projects.legal.screen2": "Chat",
+        "projects.legal.screen3": "Chamados",
         "projects.cta": "Ver mais projetos no GitHub",
         "skills.eyebrow": "Skills",
         "skills.title": "Habilidades técnicas",
@@ -229,8 +237,9 @@ const I18N = {
         "projects.eyebrow": "Portfolio",
         "projects.title": "Featured projects",
         "projects.sub":
-            "Two projects that represent my work — tap or hover to see the screens.",
+            "Three projects that represent my work — tap or hover to see the screens.",
         "projects.type": "Web App",
+        "projects.typeErp": "ERP / Internal system",
         "projects.csl.alt": "CSL Times screen",
         "projects.csl.desc":
             "News portal with showcase, filter search and real-time editorial panel.",
@@ -240,6 +249,13 @@ const I18N = {
         "projects.eco.badge": "Tap or hover on the screens",
         "projects.eco.desc":
             "B2B agricultural commodities marketplace — storefront, producer panel and offer management.",
+        "projects.legal.title": "Legal Portal",
+        "projects.legal.desc":
+            "Operational dashboard for a law firm — deadlines, productivity, IT tickets and real-time team chat.",
+        "projects.legal.private": "Internal project",
+        "projects.legal.screen1": "Dashboard",
+        "projects.legal.screen2": "Chat",
+        "projects.legal.screen3": "Tickets",
         "projects.cta": "See more projects on GitHub",
         "skills.eyebrow": "Skills",
         "skills.title": "Technical skills",

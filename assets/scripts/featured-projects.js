@@ -2,10 +2,11 @@ document.querySelectorAll(".projeto-card--destaque").forEach((card) => {
     const screenshots = card.querySelectorAll(".projeto-screenshot");
     const dotsContainer = card.querySelector(".projeto-screen-dots");
     const badge = card.querySelector(".projeto-media-badge");
+    const dynamicBadge = card.dataset.dynamicBadge === "true";
 
     if (screenshots.length <= 1) {
         if (dotsContainer) dotsContainer.remove();
-        if (badge) badge.remove();
+        if (badge && !dynamicBadge) badge.remove();
         return;
     }
 
@@ -14,9 +15,21 @@ document.querySelectorAll(".projeto-card--destaque").forEach((card) => {
     const dots = [];
 
     function labelTela(i) {
+        const screenKey = screenshots[i]?.dataset?.i18nScreen;
+        if (screenKey && window.PortfolioI18n) {
+            return window.PortfolioI18n.t(screenKey);
+        }
         const base =
             window.PortfolioI18n?.t("aria.projectScreen") ?? "Tela";
         return `${base} ${i + 1}`;
+    }
+
+    function atualizarBadge(i) {
+        if (!badge || !dynamicBadge) return;
+        const key = screenshots[i]?.dataset?.i18nScreen;
+        if (key && window.PortfolioI18n) {
+            badge.textContent = window.PortfolioI18n.t(key);
+        }
     }
 
     screenshots.forEach((_, i) => {
@@ -34,12 +47,14 @@ document.querySelectorAll(".projeto-card--destaque").forEach((card) => {
 
     document.addEventListener("i18n:change", () => {
         dots.forEach((dot, i) => dot.setAttribute("aria-label", labelTela(i)));
+        atualizarBadge(index);
     });
 
     function showSlide(i) {
         index = i;
         screenshots.forEach((img, n) => img.classList.toggle("is-active", n === i));
         dots.forEach((dot, n) => dot.classList.toggle("is-active", n === i));
+        atualizarBadge(i);
     }
 
     function proximo() {
@@ -83,4 +98,6 @@ document.querySelectorAll(".projeto-card--destaque").forEach((card) => {
         },
         { passive: true }
     );
+
+    if (dynamicBadge) atualizarBadge(0);
 });
